@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Aplikasi Konsultasi Dokter</string>
+    <string name="doctor_name">Nama Dokter</string>
+    <string name="specialist">Spesialis</string>
+    <string name="last_chat">Chat Terakhir</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="text1">Konsultasikan masalahmu dengan dokter yang berpengalaman, jadikan hidupmu lebih berkualitas.</string>
+    <string name="text2">Belum mempunyai email?</string>
+    <string name="hint_login">Masukkan Email/Nomor Telepon</string>
+    <string name="hint_password">Masukkan Password</string>
+    <string name="submit">Login</string>
+    <string name="btn_register"><u>Registrasi Disini</u></string>
+    <string name="register">Registrasi</string>
+    <string name="register_now">Registrasi Sekarang</string>
+    <string name="nama">Nama</string>
+    <string name="email">Email</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="alamat1">Desa/Kelurahan/Nama Jalan</string>
+    <string name="alamat2">Kecamatan</string>
+    <string name="alamat3">Kabupaten/Kota</string>
+    <string name="password">Password</string>
+    <string name="confirm">Masukkan Password Kembali</string>
+    <string name="nomor_hp">Nomor Telepon</string>
+</resources>
