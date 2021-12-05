@@ -1,7 +1,8 @@
-package com.example.aplikasikonsultasidokter
+package com.example.aplikasikonsultasidokter.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.aplikasikonsultasidokter.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
