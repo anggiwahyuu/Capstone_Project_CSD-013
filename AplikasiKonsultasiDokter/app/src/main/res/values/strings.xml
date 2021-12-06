@@ -47,4 +47,5 @@
     <string name="list_dokter">Daftar Dokter</string>
     <string name="chat_room">Chat</string>
     <string name="akun_saya">Akun Saya</string>
+    <string name="chat_sekarang">Chat Dokter Sekarang</string>
 </resources>
