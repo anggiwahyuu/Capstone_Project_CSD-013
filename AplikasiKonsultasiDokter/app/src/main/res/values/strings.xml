@@ -48,4 +48,22 @@
     <string name="chat_room">Chat</string>
     <string name="akun_saya">Akun Saya</string>
     <string name="chat_sekarang">Chat Dokter Sekarang</string>
+
+    <string name="btn_login">Login</string>
+    <string name="til_email">Email Address</string>
+    <string name="til_pass">Password</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_landing">Doctor.</string>
+    <string name="tv_landing_info">No Need Worry About Your Doctor</string>
+    <string name="img_landing">Landing Picture</string>
+    <string name="tv_forgot_pass">Forgot Password?</string>
+    <string name="til_name">Full Name</string>
+    <string name="til_confirm">Confirm Password</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_almanac">Almanac</string>
+    <string name="nav_add">Add</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_profile">Profile</string>
+    <string name="btn_logout">Log Out</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
