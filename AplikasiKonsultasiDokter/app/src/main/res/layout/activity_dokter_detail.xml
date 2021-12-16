@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    tools:context=".fragment.MyProfileFragment">
+    tools:context=".activity.DokterDetailActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/my_photo_profile"
+            android:id="@+id/doctor_photo_profile"
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -22,10 +22,10 @@
             tools:src="@tools:sample/avatars"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_nama"
+            android:id="@+id/layout_nama_dokter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/my_photo_profile">
+            app:layout_constraintTop_toBottomOf="@+id/doctor_photo_profile">
 
             <TextView
                 android:id="@+id/nama"
@@ -35,10 +35,10 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/nama_saya"
+                android:id="@+id/nama_dokter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nama_saya"
+                android:text="@string/nama_dokter"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/nama"/>
@@ -46,11 +46,36 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_jenis_kelamin"
+            android:id="@+id/layout_spesialis_dokter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/layout_nama">
+            app:layout_constraintTop_toBottomOf="@+id/layout_nama_dokter">
+
+            <TextView
+                android:id="@+id/spesialis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/specialist"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/spesialis_dokter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/spesialis_dokter"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/spesialis"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_kelamin_dokter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_spesialis_dokter">
 
             <TextView
                 android:id="@+id/jenis_kelamin"
@@ -60,10 +85,10 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/jenis_kelamin_saya"
+                android:id="@+id/jenis_kelamin_dokter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/jenis_kelamin_saya"
+                android:text="@string/jenis_kelamin_dokter"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/jenis_kelamin"/>
@@ -71,11 +96,36 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_alamat"
+            android:id="@+id/layout_praktik_dokter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/layout_jenis_kelamin">
+            app:layout_constraintTop_toBottomOf="@+id/layout_kelamin_dokter">
+
+            <TextView
+                android:id="@+id/tempat_praktik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tempat_praktik"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tempat_praktik_dokter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tempat_praktik_dokter"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/tempat_praktik"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_alamat_dokter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_praktik_dokter">
 
             <TextView
                 android:id="@+id/alamat"
@@ -84,52 +134,23 @@
                 android:text="@string/alamat"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/alamat_lengkap"
+            <TextView
+                android:id="@+id/alamat_dokter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/alamat">
-
-                <TextView
-                    android:id="@+id/alamat1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alamat1"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-                <TextView
-                    android:id="@+id/koma1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/koma"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toEndOf="@+id/alamat1"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-                <TextView
-                    android:id="@+id/alamat2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alamat2"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toEndOf="@+id/koma1"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:text="@string/alamat_dokter"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/alamat"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_kabupaten"
+            android:id="@+id/layout_kabupaten_dokter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/layout_alamat">
+            app:layout_constraintTop_toBottomOf="@+id/layout_alamat_dokter">
 
             <TextView
                 android:id="@+id/kabupaten"
@@ -139,10 +160,10 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/kabupaten_saya"
+                android:id="@+id/kabupaten_dokter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/kabupaten_kota_saya"
+                android:text="@string/kabupaten_dokter"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/kabupaten"/>
@@ -150,11 +171,11 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_provinsi"
+            android:id="@+id/layout_provinsi_dokter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/layout_kabupaten">
+            app:layout_constraintTop_toBottomOf="@+id/layout_kabupaten_dokter">
 
             <TextView
                 android:id="@+id/provinsi"
@@ -164,10 +185,10 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/provinsi_saya"
+                android:id="@+id/provinsi_dokter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/provinsi_saya"
+                android:text="@string/provinsi_dokter"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/provinsi"/>
@@ -175,62 +196,89 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_telepon"
+            android:id="@+id/layout_nomor_dokter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/layout_provinsi">
+            app:layout_constraintTop_toBottomOf="@+id/layout_provinsi_dokter">
 
             <TextView
-                android:id="@+id/no_telp"
+                android:id="@+id/nomor_hp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/nomor_hp"
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/nomor_saya"
+                android:id="@+id/nomor_dokter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nomor_saya"
+                android:text="@string/nomor_dokter"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/no_telp"/>
+                app:layout_constraintTop_toBottomOf="@+id/nomor_hp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout_email"
+            android:id="@+id/layout_maps_dokter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/layout_telepon">
+            app:layout_constraintTop_toBottomOf="@+id/layout_nomor_dokter">
 
             <TextView
-                android:id="@+id/email"
+                android:id="@+id/maps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/email"
+                android:text="@string/maps"
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/email_saya"
+                android:id="@+id/maps_dokter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/email_saya"
+                android:text="@string/maps"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/email"/>
+                app:layout_constraintTop_toBottomOf="@+id/maps"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_keterangan_dokter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_maps_dokter">
+
+            <TextView
+                android:id="@+id/keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/keterangan"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/keterangan_dokter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/keterangan"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/keterangan"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/btn_logout"
+            android:id="@+id/btn_chat_now"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/logout"
-            app:layout_constraintTop_toBottomOf="@+id/layout_email"/>
+            android:layout_marginTop="20dp"
+            android:text="@string/chat_sekarang"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_keterangan_dokter"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+</ScrollView>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.ChatRoomActivity">
+    tools:context=".activity.ChatRoomActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/custom_toolbar_chat"
@@ -14,6 +14,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/send"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:contentDescription="@string/back" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_chat_toolbar"
@@ -27,17 +35,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nama_dokter"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:textColor="@color/white"/>
 
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/display_chat_view_pager"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="70dp"/>
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/custom_toolbar_chat"
+        app:layout_constraintBottom_toTopOf="@id/input_chat">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/view_bubble_chat_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/row_chat_right" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/view_bubble_chat_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/row_chat_left" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/input_chat"
@@ -48,7 +79,7 @@
 
         <EditText
             android:id="@+id/chat_input"
-            android:layout_width="340dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:hint="@string/kirim_pesan"
@@ -58,14 +89,15 @@
             android:autofillHints=""
             android:inputType="text" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_enter"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/send"
-            android:drawableEnd="@drawable/ic_baseline_send"
+            android:src="@drawable/ic_baseline_send"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/send" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
