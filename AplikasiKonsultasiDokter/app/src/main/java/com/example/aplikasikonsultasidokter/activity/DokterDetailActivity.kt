@@ -24,7 +24,7 @@ class DokterDetailActivity : AppCompatActivity() {
         binding = ActivityDokterDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "User Detail"
+        supportActionBar?.title = "Detail Dokter"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val model = obtainViewModel(this@DokterDetailActivity)

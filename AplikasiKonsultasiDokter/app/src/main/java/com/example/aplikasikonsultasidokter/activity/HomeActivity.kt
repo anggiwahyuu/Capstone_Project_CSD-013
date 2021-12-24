@@ -27,6 +27,8 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.setTitle("Dokteron")
+
         val email = intent.getStringExtra(EXTRA_EMAIL)
         val bundle = Bundle()
         bundle.putString(EXTRA_EMAIL, email)
